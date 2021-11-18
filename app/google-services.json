@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "334920777108",
+    "project_id": "passwordwallet-ae611",
+    "storage_bucket": "passwordwallet-ae611.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:334920777108:android:20792d233a5c55d3c32381",
+        "android_client_info": {
+          "package_name": "com.example.passwordwallet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "334920777108-dfo1g3o9subu8i96ht1ru3quvuul9uf7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.passwordwallet",
+            "certificate_hash": "fc712f58fdc93b7d936778284bff3c087c547ecf"
+          }
+        },
+        {
+          "client_id": "334920777108-e5nug0rokv1b86k1q96cvihb3jg2sfbt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMY--wqM9cQu7E0J45uESvIPF5pbEdOkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "334920777108-e5nug0rokv1b86k1q96cvihb3jg2sfbt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
