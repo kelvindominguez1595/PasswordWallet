@@ -16,13 +16,11 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.passwordwallet.Activities.DashboardActivity;
-import com.example.passwordwallet.Activities.MainActivity;
 import com.example.passwordwallet.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 public class LoginTabFragment extends Fragment {
     TextView forgotpass;
@@ -95,4 +93,5 @@ public class LoginTabFragment extends Fragment {
             });
         }
     }
+
 }

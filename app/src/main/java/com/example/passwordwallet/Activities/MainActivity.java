@@ -1,13 +1,19 @@
 package com.example.passwordwallet.Activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import com.example.passwordwallet.Adapters.LoginAdapter;
+import com.example.passwordwallet.Fragments.BusquedaFragment;
+import com.example.passwordwallet.Fragments.HomeFragment;
+import com.example.passwordwallet.Fragments.ProfileFragment;
 import com.example.passwordwallet.R;
 import com.example.passwordwallet.Splash.SplashActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -22,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
     LoginAdapter adapter;
     FloatingActionButton google;
     float v = 0;
-
 
 
     @Override
@@ -46,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
         // listener
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
@@ -69,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         google.setTranslationY(300);
         tabLayout.setTranslationY(300);
 
@@ -80,6 +87,5 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
 
 }
