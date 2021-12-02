@@ -16,6 +16,7 @@ import com.example.passwordwallet.Fragments.HomeFragment;
 import com.example.passwordwallet.Fragments.ProfileFragment;
 import com.example.passwordwallet.R;
 import com.example.passwordwallet.Splash.SplashActivity;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         adapter = new LoginAdapter(fm, getLifecycle());
         // conectamos el adaptador al viewpager2
         viewPager.setAdapter(adapter);
+
         // listener
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 
@@ -84,8 +86,5 @@ public class MainActivity extends AppCompatActivity {
 
         google.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(400).start();
         tabLayout.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(100).start();
-
-
     }
-
 }
