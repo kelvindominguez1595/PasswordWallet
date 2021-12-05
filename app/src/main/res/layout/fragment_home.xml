@@ -8,13 +8,14 @@
     tools:context=".Fragments.HomeFragment" >
 
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/logoAPK"
         android:layout_width="139dp"
         android:layout_height="115dp"
         android:src="@drawable/logoapp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="70dp" />
+        tools:layout_editor_absoluteY="70dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView8"
@@ -24,10 +25,10 @@
         android:text="Bienvenido"
         android:textColor="#F4F4F4"
         android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView1"
+        app:layout_constraintEnd_toEndOf="@+id/logoAPK"
         app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="@+id/imageView1"
-        app:layout_constraintTop_toBottomOf="@+id/imageView1" />
+        app:layout_constraintStart_toStartOf="@+id/logoAPK"
+        app:layout_constraintTop_toBottomOf="@+id/logoAPK" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -74,13 +75,13 @@
                             android:layout_width="93dp"
                             android:layout_height="64dp"
                             android:src="@drawable/_85e4bf3cb11b227491c339a"
-                            app:layout_constraintBottom_toTopOf="@+id/textView10"
+                            app:layout_constraintBottom_toTopOf="@+id/txtUsuario"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="@+id/fondo2"
                             app:layout_constraintTop_toTopOf="@+id/fondo2" />
 
                         <TextView
-                            android:id="@+id/textView10"
+                            android:id="@+id/txtUsuario"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:scrollHorizontally="true"
@@ -119,7 +120,7 @@
                             android:layout_width="78dp"
                             android:layout_height="65dp"
                             android:src="@drawable/pngwing_com__1_"
-                            app:layout_constraintBottom_toTopOf="@+id/textView10"
+
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.39"
                             app:layout_constraintStart_toStartOf="@+id/fondo3"
@@ -127,7 +128,7 @@
                             app:layout_constraintVertical_bias="0.541" />
 
                         <TextView
-                            android:id="@+id/textView10"
+                            android:id="@+id/txtIconoCard"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:scrollHorizontally="true"
@@ -170,7 +171,7 @@
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
-                            android:id="@+id/textView10"
+                            android:id="@+id/txtUsuarioCard"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:scrollHorizontally="true"
@@ -217,7 +218,7 @@
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <TextView
-                            android:id="@+id/textView10"
+                            android:id="@+id/txtSalirCard"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:scrollHorizontally="true"
