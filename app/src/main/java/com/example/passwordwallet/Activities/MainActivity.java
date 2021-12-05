@@ -6,6 +6,7 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.widget.ViewPager2;
 
@@ -17,6 +18,9 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.passwordwallet.Adapters.LoginAdapter;
+import com.example.passwordwallet.Fragments.BusquedaFragment;
+import com.example.passwordwallet.Fragments.HomeFragment;
+import com.example.passwordwallet.Fragments.ProfileFragment;
 import com.example.passwordwallet.R;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -59,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,8 +98,10 @@ public class MainActivity extends AppCompatActivity {
         adapter = new LoginAdapter(fm, getLifecycle());
         // conectamos el adaptador al viewpager2
         viewPager.setAdapter(adapter);
+
         // listener
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
