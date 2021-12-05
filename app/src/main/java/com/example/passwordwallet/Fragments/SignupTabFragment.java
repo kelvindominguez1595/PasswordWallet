@@ -105,6 +105,9 @@ public class SignupTabFragment extends Fragment {
                                         @Override
                                         public void onSuccess(Void unused) {
                                             System.out.println("Usuario registrado: "+ userID);
+                                            Toast.makeText(getActivity(), "Bienvenido", Toast.LENGTH_SHORT).show();
+                                            startActivity(new Intent(getActivity(), DashboardActivity.class));
+                                            getActivity().finish();
                                         }
                                     });
                                 } else {

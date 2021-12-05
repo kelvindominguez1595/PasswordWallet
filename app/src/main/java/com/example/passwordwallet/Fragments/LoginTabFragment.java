@@ -87,6 +87,7 @@ public class LoginTabFragment extends Fragment {
                     if(task.isSuccessful()){
                         Toast.makeText(getActivity(), "Bienvenido", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(getActivity(), DashboardActivity.class));
+                        getActivity().finish();
                     } else{
                         Toast.makeText(getActivity(), "Usuario no registro ó esta mal escrito los datos", Toast.LENGTH_SHORT).show();
                         Log.w("RESPUES", "ERROR: ", task.getException());

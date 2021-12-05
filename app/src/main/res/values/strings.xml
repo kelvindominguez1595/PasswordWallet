@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">PasswordWallet</string>
-
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="web_client_id" translatable="false">334920777108-e5nug0rokv1b86k1q96cvihb3jg2sfbt.apps.googleusercontent.com</string>
 </resources>

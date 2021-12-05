@@ -36,5 +36,6 @@ public class DashboardActivity extends AppCompatActivity {
         mAuth.signOut();
         Toast.makeText(this, "Cerrando Sesión", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(this, MainActivity.class));
+        finish();
     }
 }
