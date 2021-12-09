@@ -9,18 +9,19 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.passwordwallet.Fragments.BusquedaFragment;
 import com.example.passwordwallet.Fragments.HomeFragment;
 import com.example.passwordwallet.Fragments.ProfileFragment;
 import com.example.passwordwallet.R;
+import com.example.passwordwallet.interfaces.IcomunicaFragments;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class DashboardActivity extends AppCompatActivity {
-    private Button btnlogout;
+public class DashboardActivity extends AppCompatActivity implements IcomunicaFragments {
     private FirebaseAuth mAuth;
     private BottomNavigationView navigationView;
     @Override
@@ -30,14 +31,6 @@ public class DashboardActivity extends AppCompatActivity {
         // firebase auth
         mAuth = FirebaseAuth.getInstance();
         // parameters
-        btnlogout = findViewById(R.id.btnlogout);
-
-        btnlogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                logout();
-            }
-        });
 
         navigationView = findViewById(R.id.bottonNavView);
         //carge el home por defecto
@@ -70,7 +63,24 @@ public class DashboardActivity extends AppCompatActivity {
 
     }
 
-    public void logout(){
+    @Override
+    public void usuarios() {
+        Toast.makeText(this, "Usuarios desde activity", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void iconos() {
+        Toast.makeText(this, "Iconos desde activity", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, ScrollingActivity.class));
+    }
+
+    @Override
+    public void subcuentas() {
+        Toast.makeText(this, "Subcuentas desde activity", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void Salir() {
         mAuth.signOut();
         Toast.makeText(this, "Cerrando Sesión", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(this, MainActivity.class));

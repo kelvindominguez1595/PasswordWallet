@@ -50,6 +50,7 @@
                 android:gravity="center">
 
                 <LinearLayout
+                    android:id="@+id/usuarios"
                     android:layout_width="136dp"
                     android:layout_height="143dp"
                     android:layout_margin="16dp"
@@ -95,6 +96,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/iconos"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="16dp"
@@ -102,10 +104,11 @@
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:clickable="false">
 
                         <ImageView
-                            android:id="@+id/fondo3"
+                            android:id="@+id/bticonos"
                             android:layout_width="111dp"
                             android:layout_height="90dp"
                             android:layout_margin="8dp"
@@ -116,16 +119,18 @@
                             app:layout_constraintTop_toTopOf="parent" />
 
                         <ImageView
-                            android:id="@+id/btnicono"
+                            android:id="@+id/viewiconos"
                             android:layout_width="78dp"
                             android:layout_height="65dp"
-                            android:src="@drawable/pngwing_com__1_"
 
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="12dp"
+                            android:src="@drawable/pngwing_com__1_"
+                            app:layout_constraintBottom_toTopOf="@+id/txtIconoCard"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintHorizontal_bias="0.39"
-                            app:layout_constraintStart_toStartOf="@+id/fondo3"
-                            app:layout_constraintTop_toTopOf="@+id/fondo3"
-                            app:layout_constraintVertical_bias="0.541" />
+                            app:layout_constraintStart_toStartOf="@+id/btniconos"
+                            app:layout_constraintTop_toTopOf="@+id/btniconos" />
 
                         <TextView
                             android:id="@+id/txtIconoCard"
@@ -150,6 +155,7 @@
                 android:gravity="center">
 
                 <LinearLayout
+                    android:id="@+id/subcuentas"
                     android:layout_width="136dp"
                     android:layout_height="143dp"
                     android:layout_margin="16dp"
@@ -197,6 +203,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/salir"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="16dp"
@@ -222,7 +229,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:scrollHorizontally="true"
-                            android:text="Salir"
+                            android:text="Cerrar Sesion"
                             android:textColor="#000000"
                             android:textSize="20sp"
                             app:layout_constraintBottom_toBottomOf="parent"
