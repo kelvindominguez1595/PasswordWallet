@@ -28,6 +28,7 @@ public class ScrollingActivity extends AppCompatActivity {
     //arreglo para llenar el recyclerView
     ArrayList<Customer> listCustomers;
     RecyclerView rcvCustomers;
+    AdapterCustomer adapter;
 
     //administrador de la base de datos
     DBCustomer admin = new DBCustomer(this, "dbcustomers", null, 1);
@@ -50,16 +51,13 @@ public class ScrollingActivity extends AppCompatActivity {
         listCustomers = new ArrayList<Customer>();
         rcvCustomers = findViewById(R.id.rcvCustomers);
 
-//administrar el RecyclerView
+        //administrar el RecyclerView
         rcvCustomers.setLayoutManager(new LinearLayoutManager(this));
 
-//llenar el arreglo de clientes
+        //llenar el arreglo de clientes
         fillCustomersList();
 
-//Usamos la clase AdapterCustomer para pasar los datos
-        AdapterCustomer adapter = new AdapterCustomer(listCustomers);
-
-//para escuchar los clic en cada elemento del RecyclerView
+        //para escuchar los clic en cada elemento del RecyclerView
         adapter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,10 +65,23 @@ public class ScrollingActivity extends AppCompatActivity {
             }
         });
 
-//asignar el adaptador al RecyclerView
-        rcvCustomers.setAdapter(adapter);
+        FloatingActionButton fab = binding.fab;
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Actualizado los registros...", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+
+                //limpiar el RecyclerView
+                clearData();
+
+                //llenar el arreglo de clientes
+                fillCustomersList();
+            }
+        });
 
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -127,8 +138,26 @@ public class ScrollingActivity extends AppCompatActivity {
             //agregar fila al array
             listCustomers.add(customer);
 
+            //Usamos la clase AdapterCustomer para pasar los datos
+            adapter = new AdapterCustomer(listCustomers);
+
+            //asignar el adaptador al RecyclerView
+            rcvCustomers.setAdapter(adapter);
+
         }
     }
+
+    //para limpiar los datos de recyclerView
+    public void clearData() {
+        listCustomers.clear();
+
+        //Usamos la clase AdapterCustomer para pasar los datos
+        adapter = new AdapterCustomer(listCustomers);
+
+        //asignar el adaptador al RecyclerView
+        rcvCustomers.setAdapter(adapter);
+    }
+
 
     private void launchNew() {
         //lanzar el activity
