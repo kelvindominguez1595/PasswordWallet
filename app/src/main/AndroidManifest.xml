@@ -11,6 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PasswordWallet">
         <activity
+            android:name=".Activities.ScrollingActivity2"
+            android:exported="false"
+            android:label="@string/title_activity_scrolling2"
+            android:theme="@style/Theme.PasswordWallet.NoActionBar" />
+        <activity
             android:name=".Activities.NewActivity"
             android:exported="false" />
         <activity

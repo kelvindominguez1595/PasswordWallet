@@ -70,13 +70,14 @@ public class DashboardActivity extends AppCompatActivity implements IcomunicaFra
 
     @Override
     public void iconos() {
-        Toast.makeText(this, "Iconos desde activity", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Iconos ", Toast.LENGTH_SHORT).show();
         startActivity(new Intent(this, ScrollingActivity.class));
     }
 
     @Override
     public void subcuentas() {
-        Toast.makeText(this, "Subcuentas desde activity", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Subcuentas", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(this, ScrollingActivity2.class));
     }
 
     @Override
