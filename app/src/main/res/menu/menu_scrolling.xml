@@ -3,8 +3,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.passwordwallet.Activities.ScrollingActivity">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_about"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="@string/action_about"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_help"
+        android:orderInCategory="100"
+        android:title="@string/action_help"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_exit"
+        android:orderInCategory="100"
+        android:title="@string/action_exit"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_find"
+        android:orderInCategory="115"
+        android:title="@string/action_search"
+        app:showAsAction="ifRoom|withText" />
+
+    <item
+        android:id="@+id/action_customer"
+        android:icon="@drawable/ic_customer"
+        android:orderInCategory="120"
+        android:title="@string/action_new"
+        app:showAsAction="always|collapseActionView" />
+
 </menu>

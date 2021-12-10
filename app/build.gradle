@@ -21,11 +21,6 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    buildFeatures{
-
-        viewBinding true
-
-    }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -34,10 +29,11 @@ android {
     compileSdkVersion 31
     buildToolsVersion '31.0.0'
 
+    buildFeatures{
 
+        viewBinding true
 
-
-
+    }
 }
 
 
