@@ -13,7 +13,7 @@
 
     <!-- para los formularios -->
     <!-- new -->
-    <string name="formnew_title">Nuevo Cliente</string>
+    <string name="formnew_title">Nuevo Usuario</string>
     <string name="formnew_name">Escriba su nombre</string>
     <string name="formnew_gender">Género</string>
     <string name="formnew_gender_m">Masculino</string>
@@ -24,7 +24,7 @@
 
 
     <!-- descipción imágenes -->
-    <string name="description_ic_customer">Imagen cliente</string>
+    <string name="description_ic_customer">Imagen usuario</string>
 
     <!-- para los botones -->
     <string name="button_save">Guardar</string>
@@ -35,12 +35,13 @@
     <!-- Mensajes -->
     <string name="msg_save">Los datos se guardaron.</string>
     <string name="msg_error">Error: intente nuevamente.</string>
-    <string name="msg_clean">Puede ingresar un nuevo cliente.</string>
+    <string name="msg_clean">Puede ingresar un nuevo usuario.</string>
     <string name="msg_data">Debe completar todos los datos.</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="web_client_id" translatable="false">334920777108-e5nug0rokv1b86k1q96cvihb3jg2sfbt.apps.googleusercontent.com</string>
-    <string name="title_activity_scrolling2">ScrollingActivity2</string>
+    <string name="title_activity_scrolling">Usuarios</string>
+    <string name="title_activity_scrolling2">Subcuentas</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
 
@@ -131,4 +132,5 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_scrolling3">ScrollingActivity3</string>
 </resources>

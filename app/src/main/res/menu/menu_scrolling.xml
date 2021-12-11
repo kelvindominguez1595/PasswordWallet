@@ -29,7 +29,7 @@
 
     <item
         android:id="@+id/action_customer"
-        android:icon="@drawable/ic_customer"
+        android:icon="@drawable/_85e4bf3cb11b227491c339a"
         android:orderInCategory="120"
         android:title="@string/action_new"
         app:showAsAction="always|collapseActionView" />

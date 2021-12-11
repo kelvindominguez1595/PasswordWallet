@@ -50,20 +50,10 @@ public class ScrollingActivity extends AppCompatActivity {
         //para el RecyclerView
         listCustomers = new ArrayList<Customer>();
         rcvCustomers = findViewById(R.id.rcvCustomers);
-
-        //administrar el RecyclerView
         rcvCustomers.setLayoutManager(new LinearLayoutManager(this));
-
-        //llenar el arreglo de clientes
         fillCustomersList();
 
         //para escuchar los clic en cada elemento del RecyclerView
-        adapter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(ScrollingActivity.this, "Click", Toast.LENGTH_SHORT).show();
-            }
-        });
 
         FloatingActionButton fab = binding.fab;
         fab.setOnClickListener(new View.OnClickListener() {
@@ -81,6 +71,7 @@ public class ScrollingActivity extends AppCompatActivity {
         });
 
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

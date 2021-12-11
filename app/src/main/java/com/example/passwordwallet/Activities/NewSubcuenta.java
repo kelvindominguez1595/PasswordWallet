@@ -18,7 +18,7 @@ import com.example.passwordwallet.BD.DBCustomer;
 import com.example.passwordwallet.R;
 
 public class NewSubcuenta extends AppCompatActivity {
-    EditText edtName,edtEmail,edtContraseña;
+    EditText edtName,edtEmail,edtContraseña,edtFecha;
 
     //para el género
     String gender;
@@ -34,6 +34,7 @@ public class NewSubcuenta extends AppCompatActivity {
         edtName = findViewById(R.id.edtName);
         edtEmail = findViewById(R.id.edtEmail);
         edtContraseña=findViewById(R.id.edtContraseña);
+        edtFecha=findViewById(R.id.edtFecha);
 
     }
     @Override
@@ -56,6 +57,7 @@ public class NewSubcuenta extends AppCompatActivity {
         edtName.setText("");
         edtEmail.setText("");
         edtContraseña.setText("");
+        edtFecha.setText("");
         edtName.requestFocus();
 
         Toast.makeText(this, getString(R.string.msg_clean), Toast.LENGTH_SHORT).show();
@@ -70,7 +72,7 @@ public class NewSubcuenta extends AppCompatActivity {
             ContentValues data = new ContentValues();
 
             if(edtName.getText().toString().isEmpty() || edtEmail.getText().toString().isEmpty()
-                    || edtContraseña.getText().toString().isEmpty()) {
+                    || edtContraseña.getText().toString().isEmpty()|| edtFecha.getText().toString().isEmpty() ) {
                 //pedir todos los datos
                 Toast.makeText(this, getString(R.string.msg_data), Toast.LENGTH_SHORT).show();
             }else{
@@ -78,6 +80,7 @@ public class NewSubcuenta extends AppCompatActivity {
                 data.put("cuentaprincipal_id", edtName.getText().toString());
                 data.put("email", edtEmail.getText().toString());
                 data.put("password", edtContraseña.getText().toString());
+                data.put("fecha", edtFecha.getText().toString());
 
                 //insertar
                 db.insert("cuenta_secund", null, data);

@@ -65,11 +65,16 @@
         android:textColor="@color/secondaryDarkColor"
         android:textSize="18sp" />
 
-
-        <Spinner
-            android:id="@+id/CuentaPrincipal"
+        <EditText
+            android:id="@+id/edtFecha"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="dd/mm/yy"
+            android:inputType="date"
+            android:padding="15dp"
+            android:textColor="@color/secondaryDarkColor"
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/btnSave"

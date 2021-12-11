@@ -16,7 +16,6 @@ public class BDSubcuentas extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("create table cuenta_secund(" +
                 "id integer primary key autoincrement," +
                 "cuentaprincipal_id text not null," +
-                "icono_id text not null," +
                 "email text not null," +
                 "password text not null," +
                 "fecha date not null" +
