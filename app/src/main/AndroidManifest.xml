@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PasswordWallet">
         <activity
+            android:name=".Activities.NewSubcuenta"
+            android:exported="false" />
+        <activity
             android:name=".Activities.ScrollingActivity2"
             android:exported="false"
             android:label="@string/title_activity_scrolling2"
